@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView banner = (ImageView)findViewById(R.id.imageView);
 
+        Button scan_test_bt = (Button)findViewById(R.id.scan_test_bt);
 
         search_Bt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent SOS_intent = new Intent(MainActivity.this, sosActivity.class);
                 startActivity(SOS_intent);
+            }
+        });
+
+        scan_test_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Scan_intent = new Intent(MainActivity.this, scanTest.class);
+                startActivity(Scan_intent);
             }
         });
 
